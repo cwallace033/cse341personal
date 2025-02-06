@@ -5,10 +5,10 @@
     "description": "MTG API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341personal-bu80.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/users/": {
@@ -336,16 +336,6 @@
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }

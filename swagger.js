@@ -5,8 +5,8 @@ const doc = {
     title: 'My API',
     description: 'MTG API',
   },
-  host: 'localhost:8080',
-    schemes: ['http'],
+  host: 'cse341personal-bu80.onrender.com',
+    schemes: ['https'],
 };
 
 const outputFile = './swagger.json';
