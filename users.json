@@ -1,0 +1,10 @@
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@example.com",
+    "favoriteColor": "Blue",
+    "birthday": "1990-01-01",
+    "timeAvailable": "9 AM - 5 PM",
+    "weekdayAvailable": "Monday, Wednesday, Friday",
+    "phoneNumber": "123-456-7890"
+  }

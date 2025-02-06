@@ -1,0 +1,68 @@
+# Test - Get all data
+GET http://localhost:8080/users
+###
+# Test - Create a User
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "firstName": "Jimathy",
+  "lastName": "Doe",
+  "email": "johndoe@example.com",
+  "favoriteColor": "Blue",
+  "birthday": "1990-01-01",
+  "timeAvailable": "9 AM - 5 PM",
+  "weekdayAvailable": "Monday, Wednesday, Friday",
+  "phoneNumber": "123-456-7890"
+}
+###
+# Test - Update a User
+PUT http://localhost:8080/users/67a3e10f2521755239d26fdc
+Content-Type: application/json
+
+{
+  "firstName": "Jim",
+  "lastName": "Doe",
+  "email": "janedoe@example.com",
+  "favoriteColor": "Green",
+  "birthday": "1992-05-10",
+  "timeAvailable": "10 AM - 4 PM",
+  "weekdayAvailable": "Tuesday, Thursday",
+  "phoneNumber": "098-765-4321"
+}
+###
+#Test - Delete a User
+DELETE http://localhost:8080/users/67a3e3454dfe2038b13c3aa8
+###
+#Test - Return all cards
+GET http://localhost:8080/cards
+###
+
+# Test - Create a Card
+POST http://localhost:8080/cards
+Content-Type: application/json
+
+{
+  "name": "Black Lotus",
+  "description": "A powerful artifact card.",
+  "price": 5000,
+  "rarity": "Legendary",
+  "set": "Alpha",
+  "imageUrl": "http://example.com/black-lotus.jpg",
+  "cardType": "Artifact"
+}
+###
+
+# Test - Update a Card
+PUT http://localhost:8080/cards/67a4028b915387f88b211207
+Content-Type: application/json
+
+{
+  "name": "Black Lotus",
+  "description": "A reprinted artifact card.",
+  "price": 4000,
+  "rarity": "Rare",
+  "set": "Beta",
+  "imageUrl": "http://example.com/black-lotus-updated.jpg",
+  "cardType": "Artifact"
+}
