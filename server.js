@@ -24,6 +24,8 @@ app
   })
   app.use("/", routes);
   app.use(express.static('public'));
+
+
   
 
 
