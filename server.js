@@ -1,5 +1,7 @@
 const express = require('express');
 const dotenv = require("dotenv");
+const errorHandler = require('./middleware/errorHandler');
+
 dotenv.config();
 
 const mongodb = require('./db/connect');
@@ -24,6 +26,7 @@ app
   })
   app.use("/", routes);
   app.use(express.static('public'));
+  app.use(errorHandler);
 
 
   
