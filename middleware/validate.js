@@ -8,7 +8,7 @@ const saveUser = (req, res, next) => {
     favoriteColor: 'string',
     birthday: 'string',
     timeAvailavle: 'required|string',
-    weekdayAvailable: 'required|string',
+    password: 'required|string',
     phoneNumber: 'required|string'
   };
   validator(req.body, validationRule, {}, (err, status) => {

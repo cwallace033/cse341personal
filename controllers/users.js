@@ -42,9 +42,9 @@ const getDataById = async (req, res, next) => {
 const createData = async (req, res, next) => {
   try {
     const db = mongodb.getDb();
-    const { firstName, lastName, email, favoriteColor, birthday, timeAvailable, weekdayAvailable, phoneNumber } = req.body;
+    const { firstName, lastName, email, favoriteColor, birthday, timeAvailable, password, phoneNumber } = req.body;
 
-    if (!firstName || !lastName || !email || !favoriteColor || !birthday || !timeAvailable || !weekdayAvailable || !phoneNumber) {
+    if (!firstName || !lastName || !email || !favoriteColor || !birthday || !timeAvailable || !password || !phoneNumber) {
       return res.status(400).json({ message: 'Please provide all required fields' });
     }
 
@@ -55,7 +55,7 @@ const createData = async (req, res, next) => {
       favoriteColor,
       birthday,
       timeAvailable,
-      weekdayAvailable,
+      password,
       phoneNumber
     };
 
@@ -79,9 +79,9 @@ const updateData = async (req, res, next) => {
     const db = mongodb.getDb();
 
     const userId = new ObjectId(req.params.id);
-    const { firstName, lastName, email, favoriteColor, birthday, timeAvailable, weekdayAvailable, phoneNumber } = req.body;
+    const { firstName, lastName, email, favoriteColor, birthday, timeAvailable, password, phoneNumber } = req.body;
 
-    if (!firstName && !lastName && !email && !favoriteColor && !birthday && !timeAvailable && !weekdayAvailable && !phoneNumber) {
+    if (!firstName && !lastName && !email && !favoriteColor && !birthday && !timeAvailable && !password && !phoneNumber) {
       return res.status(400).json({ message: 'Please provide at least one field to update' });
     }
 
@@ -92,7 +92,7 @@ const updateData = async (req, res, next) => {
     if (favoriteColor) updateInfo.favoriteColor = favoriteColor;
     if (birthday) updateInfo.birthday = birthday;
     if (timeAvailable) updateInfo.timeAvailable = timeAvailable;
-    if (weekdayAvailable) updateInfo.weekdayAvailable = weekdayAvailable;
+    if (password) updateInfo.password = password;
     if (phoneNumber) updateInfo.phoneNumber = phoneNumber;
 
     const result = await db.collection('users').updateOne(
