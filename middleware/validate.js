@@ -8,7 +8,7 @@ const saveUser = (req, res, next) => {
     favoriteColor: 'string',
     birthday: 'string',
     timeAvailable: 'required|string',
-    password: 'required|string',
+    password: 'required|string|min:8|regex:^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*])',
     phoneNumber: 'required|string'
   };
   validator(req.body, validationRule, {}, (err, status) => {
