@@ -50,7 +50,7 @@
                 "timeAvailable": {
                   "example": "any"
                 },
-                "weekdayAvailable": {
+                "password": {
                   "example": "any"
                 },
                 "phoneNumber": {
@@ -135,7 +135,7 @@
                 "timeAvailable": {
                   "example": "any"
                 },
-                "weekdayAvailable": {
+                "password": {
                   "example": "any"
                 },
                 "phoneNumber": {

@@ -7,7 +7,7 @@ const saveUser = (req, res, next) => {
     email: 'required|email',
     favoriteColor: 'string',
     birthday: 'string',
-    timeAvailavle: 'required|string',
+    timeAvailable: 'required|string',
     password: 'required|string',
     phoneNumber: 'required|string'
   };
