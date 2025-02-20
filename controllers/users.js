@@ -48,6 +48,8 @@ const createData = async (req, res, next) => {
       return res.status(400).json({ message: 'Please provide all required fields' });
     }
 
+    const hashedPassword = await bcrypt.hash(password, 10);
+
     const newUser = {
       firstName,
       lastName,
@@ -55,7 +57,7 @@ const createData = async (req, res, next) => {
       favoriteColor,
       birthday,
       timeAvailable,
-      password,
+      password: hashedPassword,
       phoneNumber
     };
 
