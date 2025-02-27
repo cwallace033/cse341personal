@@ -1,5 +1,6 @@
 const passport = require('passport');
 const GitHubStrategy = require('passport-github2').Strategy;
+const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 passport.use(new GitHubStrategy({
