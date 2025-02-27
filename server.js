@@ -16,6 +16,7 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
+
 }));
 
 // Initialize Passport
@@ -45,7 +46,7 @@ app.get('/auth/github/callback',
 );
 
 // Protected route
-app.get('/dashboard', (req, res) => {
+app.get('/api-docs', (req, res) => {
   if (!req.isAuthenticated()) {
     return res.redirect('/');
   }

@@ -1,10 +1,10 @@
 {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "johndoe@example.com",
-    "favoriteColor": "Blue",
-    "birthday": "1990-01-01",
-    "timeAvailable": "9 AM - 5 PM",
-    "password": "Password",
-    "phoneNumber": "123-456-7890"
-  }
+  "firstName": "Chase",
+  "lastName": "Wallace",
+  "email": "cmwallace03@gmail.com",
+  "favoriteColor": "Blue",
+  "birthday": "1990-01-01",
+  "timeAvailable": "9 AM - 5 PM",
+  "password": "Password",
+  "phoneNumber": "123-456-7890"
+}
