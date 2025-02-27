@@ -45,13 +45,6 @@ app.get('/auth/github/callback',
   }
 );
 
-// Protected route
-app.get('/api-docs', (req, res) => {
-  if (!req.isAuthenticated()) {
-    return res.redirect('/');
-  }
-  res.json({ message: `Hello, ${req.user.username}!`, user: req.user });
-});
 
 // Logout route
 app.get('/logout', (req, res) => {
