@@ -6,8 +6,8 @@ router.use('/users', require('./users'));
 
 router.use('/cards', require("./cards"))
 
-// router.use('/api-docs', authenticateJWT, require('./swagger')); 
-router.use('/', require('./swagger')); 
+router.use('/api-docs', authenticateJWT, require('./swagger')); 
+// router.use('/', require('./swagger')); 
 
 
 router.use('/auth', require('./auth'));
