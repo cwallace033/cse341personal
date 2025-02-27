@@ -12,7 +12,7 @@ const swaggerDocument = require('../swagger.json');
 //     }, swaggerUi.serve, swaggerUi.setup (swaggerDocument));
     
 
-router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+router.use('/api-docs', passport.authenticate('github', { session: false }), swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
 

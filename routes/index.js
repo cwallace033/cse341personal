@@ -7,12 +7,7 @@ router.use('/users', require('./users'));
 
 router.use('/cards', require("./cards"))
 
-router.use('/api-docs', (req, res, next) => {
-    if (req.isAuthenticated()) {
-      return next();  
-    }
-    res.redirect('/auth/github'); 
-  }, require('./swagger'));
+router.use('/api-docs', require('./swagger'));
 
 
 router.use('/auth', require('./auth'));
